@@ -1,0 +1,4 @@
+Cora    ConvCurv
+   0 0.696000
+std  0.000000
+mean 0.696000
