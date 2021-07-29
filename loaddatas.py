@@ -5,7 +5,7 @@ import sys
 
 def loaddatas(d_loader,d_name):
     if d_loader=='Planetoid':
-        dataset = getattr(torch_geometric.datasets, d_loader)('../data/'+d_name,d_name,transform=T.NormalizeFeatures())
+        dataset = getattr(torch_geometric.datasets, d_loader)('data/'+d_name,d_name,transform=T.NormalizeFeatures())
     else:
         dataset = getattr(torch_geometric.datasets, d_loader)('data/'+d_name,d_name)
     return dataset

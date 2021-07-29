@@ -5,37 +5,42 @@ import torch.nn.functional as F
 from torch_geometric.data import Data
 import random
 import numpy as np
+from config import Config
 from baselines import ConvCurv
 #load the neural networks
-
 def train(train_mask):
     model.train()
     optimizer.zero_grad()
-    F.nll_loss(model(data)[train_mask], data.y[train_mask]).backward()
+    nll_loss, Reg1, Reg2 = model(data)
+    cross_entropy_loss = F.nll_loss(nll_loss[train_mask], data.y[train_mask])
+    loss = cross_entropy_loss + config.gamma1 * Reg1 + config.gamma2 * Reg2 if config.loss_mode == 1 else cross_entropy_loss
+    loss.backward()
     optimizer.step()
 
 def test(train_mask,val_mask,test_mask):
     model.eval()
-    logits, accs = model(data), []
+    logits, Reg1, Reg2 = model(data)
+    accs = []
     for mask in [train_mask, val_mask, test_mask]:
         pred = logits[mask].max(1)[1]
         #print(pred)
         acc = pred.eq(data.y[mask]).sum().item() / mask.sum().item()
         accs.append(acc)
-    accs.append(F.nll_loss(model(data)[val_mask], data.y[val_mask]))
+    accs.append(F.nll_loss(logits[val_mask], data.y[val_mask]))
     print(accs)
     return accs
 
+config = Config()
 #load dataset
-times=range(1)  #Todo:实验次数
-is_train=True
-epoch_num=200
-wait_total=100
-pipelines=['ConvCurv']
-pipeline_acc={'ConvCurv':[i for i in times]}
-pipeline_acc_sum={'ConvCurv':0}
+times = range(config.times)  #Todo:实验次数
+is_train = config.is_train
+epoch_num = config.epoch_num
+wait_total = config.wait_total
+pipelines = ['ConvCurv']
+pipeline_acc = {'ConvCurv':[i for i in times]}
+pipeline_acc_sum = {'ConvCurv':0}
 # d_names=['Cora','Citeseer','PubMed','Photo','Computers','CS','Physics']
-d_names=['Cora']
+d_names = config.d_names
 #d_names=['Photo','Computers','CS','Physics']
 for d_name in d_names:
     f2=open('scores/pipe_benchmark_' +d_name+ '_scores.txt', 'w+')
@@ -62,7 +67,7 @@ for d_name in d_names:
                 val_mask=data.val_mask.bool()
                 test_mask=data.test_mask.bool()
             model,data = locals()[Conv_method].call(data,dataset.name,data.x.size(1),dataset.num_classes)
-            optimizer = torch.optim.Adam(model.parameters(), lr=0.005, weight_decay=0.0005)
+            optimizer = torch.optim.Adam(model.parameters(), lr=config.learning_rate, weight_decay=0.0005)
             best_val_acc = test_acc = 0.0
             best_val_loss = np.inf
             if is_train:

@@ -1,5 +1,6 @@
 import os.path as osp
 import torch
+from torch_scatter import scatter
 import torch.nn.functional as F
 import torch_geometric.transforms as T
 import numpy as np
@@ -22,14 +23,28 @@ class Net(torch.nn.Module):
     def forward(self,data):
         x = F.dropout(data.x,p=0.6,training=self.training)
         x = self.conv1(x, data.edge_index)
-        x = F.elu(x)
+        x = F.elu(x)   #Todo:在前还是在后？
+
+        num_edge_noloop = data.num_edges-data.num_nodes
+        num_classes = torch.max(data.y)+1
+        edge_mask = torch.tensor([i < 20*num_classes for i in data.edge_index[0][:num_edge_noloop]])
+        source_feature = x[:num_edge_noloop].index_select(0, data.edge_index[0][:num_edge_noloop])[edge_mask]
+        target_feature = x[:num_edge_noloop].index_select(0, data.edge_index[1][:num_edge_noloop])[edge_mask]
+        t = source_feature - target_feature
+        t = torch.sum(t*t, dim=1)*data.w_mul_sigmoid[edge_mask]
+        Reg1 = t.sum()
+
+        x_t = x[torch.tensor(data.train_mask)]
+        temp_matrix = x_t.T@data.D@x_t - torch.eye(64)
+        Reg2 = (temp_matrix*temp_matrix).sum()
+
         x = F.dropout(x,p=0.6,training=self.training)
         x = self.conv2(x, data.edge_index)
         # x_n=x.detach().numpy()
         # x_n=minmaxscaler(x_n)
         # with open("vectors_norm","wb") as f:
         #     pickle.dump(x_n,f)
-        return F.log_softmax(x, dim=1)
+        return F.log_softmax(x, dim=1), Reg1, Reg2
 
 def num(strings):
     try:
@@ -41,7 +56,7 @@ def call(data,name,num_features,num_classes):
     filename='data/curvature/graph_'+name+'.edge_list'
     f=open(filename)
     cur_list=list(f)
-    if name=='Cora' or name=='CS':
+    if name=='CS':
         ricci_cur=[[] for i in range(len(cur_list))]
         for i in range(len(cur_list)):
             ricci_cur[i]=[num(s) for s in cur_list[i].split(' ',2)]
@@ -52,9 +67,20 @@ def call(data,name,num_features,num_classes):
             ricci_cur[i+len(cur_list)]=[ricci_cur[i][1],ricci_cur[i][0],ricci_cur[i][2]]
     ricci_cur=sorted(ricci_cur)
     w_mul=[i[2] for i in ricci_cur]
+
+    w_mul_sigmoid=torch.sigmoid(torch.tensor(w_mul))
+    data.w_mul_sigmoid=w_mul_sigmoid
+    D=scatter(torch.tensor(w_mul), data.edge_index[0], dim=0, reduce='add')
+    D=torch.diag(torch.sigmoid(D[torch.tensor(data.train_mask)]))
+    data.D=D
+
+    eg_index0=[i[0] for i in ricci_cur]
+    eg_index1=[i[1] for i in ricci_cur]
     #w_mul=[(i[2]+1)/2 for i in ricci_cur]
     w_mul=w_mul+[0 for i in range(data.x.size(0))]
     w_mul=torch.tensor(w_mul, dtype=torch.float)
+    # data.edge_index[0]=torch.tensor(eg_index0)
+    # data.edge_index[1]=torch.tensor(eg_index1)
     data.edge_index, _ = remove_self_loops(data.edge_index)
     data.edge_index, _ = add_self_loops(data.edge_index,num_nodes=data.x.size(0))
     data.w_mul=w_mul.view(-1,1)

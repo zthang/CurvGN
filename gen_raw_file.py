@@ -51,11 +51,22 @@ def save_dict():
         graph[i].append(2708 + y_max[i])
         graph[2708 + y_max[i]].append(i)
 
-    f = open("ind.cora.graph", 'wb')
+    f = open("data/Cora/Cora/raw_忘了/ind.cora.graph", 'wb')
     pickle.dump(graph, f)
     f.close()
 
 dic = {}
+def DiGraph_to_graph():
+    path = osp.join("data/Cora/Cora/raw_有向图140", 'ind.{}.{}'.format("cora", "graph"))
+    with open(path, 'rb') as f:
+        out = pickle.load(f, encoding='latin1')
+    for key in range(2708):
+        for item in out[key]:
+            if key not in out[item]:
+                out[item].append(key)
+    with open('ind.{}.{}'.format("cora", "graph"), 'wb') as f:
+        pickle.dump(out, f)
+
 def read_file(folder, prefix, name):
     path = osp.join(folder, 'ind.{}.{}'.format(prefix.lower(), name))
 
@@ -66,30 +77,33 @@ def read_file(folder, prefix, name):
         out = pickle.load(f, encoding='latin1')
 
     if name == 'graph':
-        # edge_index=[]
-        # for key in range(2715):
-        #     for item in out[key]:
-        #         if (key,item) not in edge_index:
-        #             edge_index.append((key,item))
-        #
-        # Gd = nx.Graph()
-        # Gd.add_edges_from(edge_index)
-        # Gd_OT = OllivierRicci(Gd, alpha=0.5, method="OTD", verbose="INFO")
-        # Gd = Gd_OT.compute_ricci_curvature()
-        # with open("graph_Cora.edge_list", "w") as f:
-        #     for item in Gd.edges:
-        #         f.writelines(f"{item[0]} {item[1]} {Gd[item[0]][item[1]]['ricciCurvature']}\n")
-        #     f.close()
+        edge_index=[]
+        for key in range(2708):
+            for item in out[key]:
+                if (key,item) not in edge_index:
+                    edge_index.append((key,item))
+
+        Gd = nx.Graph()
+        Gd.add_edges_from(edge_index)
+        Gd_OT = OllivierRicci(Gd, alpha=0.5, method="OTD", verbose="INFO", chunksize=50, cache_maxsize=None)
+        Gd = Gd_OT.compute_ricci_curvature()
+        with open("graph_Cora.edge_list", "w") as f:
+            for item in Gd.edges:
+                f.writelines(f"{item[0]} {item[1]} {Gd[item[0]][item[1]]['ricciCurvature']}\n")
+            f.close()
         return out
 
     # out = out.todense() if hasattr(out, 'todense') else out
     # out = torch.Tensor(out)
     return out
 
+DiGraph_to_graph()
+
 names = ['x', 'tx', 'allx', 'y', 'ty', 'ally', 'graph', 'test.index']
-items = [read_file("data/Cora/Cora/raw_old", "Cora", name) for name in names]
+items = [read_file("data/Cora/Cora/raw", "Cora", name) for name in names]
 x, tx, allx, y, ty, ally, graph, test_index = items
 
 # save_file_x(tx,get_labels())
 # save_file_y(ty,get_y())
 # save_dict()
+print(1)

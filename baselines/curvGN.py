@@ -1,20 +1,26 @@
 import torch
 import torch.nn.functional as F
 import torch_geometric.transforms as T
-from torch.nn import Sequential as seq, Parameter,LeakyReLU,init,Linear
+from torch.nn import Sequential as seq, Parameter,LeakyReLU,init,Linear,Sigmoid,ReLU,PReLU,ELU
 from torch_geometric.nn import MessagePassing
 from torch_geometric.utils import softmax,degree
-
+from config import Config
+config = Config()
 class  curvGN(MessagePassing):
     def __init__(self, in_channels, out_channels,curv_n,w_mul,bias=True):
         super(curvGN, self).__init__(aggr='add') # "Add" aggregation.
         self.w_mul = w_mul
-        self.lin=Linear(in_channels,out_channels)
-        widths=[1,out_channels]
-        self.w_mlp_out=create_wmlp(widths,out_channels,1)
+        self.w_mul_activation = w_mul@torch.ones([1, out_channels])
+        self.lin = Linear(in_channels,out_channels)
+        widths = [1,out_channels]
+        self.w_mlp_out = create_wmlp(widths,out_channels,1)
+        self.w_activation_out = create_activation_function(out_channels)
     def forward(self, x, edge_index):
         x = self.lin(x)
-        out_weight=self.w_mlp_out(self.w_mul)
+        if config.curvature_activate_mode == 0:
+            out_weight=self.w_mlp_out(self.w_mul)
+        else:
+            out_weight=self.w_activation_out(self.w_mul_activation)
         out_weight=softmax(out_weight,edge_index[0])
         return self.propagate(x=x,edge_index=edge_index,out_weight=out_weight)
     def message(self,x_j,edge_index,out_weight):
@@ -32,4 +38,14 @@ def create_wmlp(widths,nfeato,lbias):
     mlp_modules.append(Linear(widths[len(widths)-1],nfeato,bias=lbias))
     return seq(*mlp_modules)
 
-
+def create_activation_function(nfeato):
+    if config.curvature_activate_mode == 1:
+        return ReLU()
+    elif config.curvature_activate_mode == 2:
+        return LeakyReLU(0.1)
+    elif config.curvature_activate_mode == 3:
+        return PReLU()
+    elif config.curvature_activate_mode == 4:
+        return PReLU(nfeato)
+    elif config.curvature_activate_mode == 5:
+        return ELU()
