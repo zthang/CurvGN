@@ -5,7 +5,7 @@ from collections import defaultdict
 import scipy.sparse
 import pickle
 
-is_DiGraph = True
+is_DiGraph = False
 
 def save_file(folder, prefix, name, obj):
     path = osp.join(folder, 'ind.{}.{}'.format(prefix.lower(), name))

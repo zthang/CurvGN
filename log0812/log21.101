@@ -1,0 +1,113 @@
+nohup: ignoring input
+{'is_train': True, 'is_DiGraph': False, 'times': 50, 'epoch_num': 200, 'wait_total': 100, 'd_names': ['Cora'], 'learning_rate': 0.005, 'gamma1': 2e-06, 'gamma2': 3e-07, 'leaky_relu_negative_slope': 0.1, 'loss_mode': 0, 'curvature_activate_mode': 2, 'mask_mode': 1, 'mask_rate': 0.1, 'learnable_curvature': 0, 'curvature_method': 1}
+/home/zthang/zthang/CurvGN-master/baselines/ConvCurv.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  D = torch.diag(torch.sigmoid(D[torch.tensor(data.train_mask)]))
+/home/zthang/zthang/CurvGN-master/baselines/ConvCurv.py:40: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  x_t = x[torch.tensor(data.train_mask)]
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8180 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8140 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8130 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8080 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8180 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8130 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8190 
+
+Early stop! Min loss:  tensor(1.1467, grad_fn=<NllLossBackward>) , Max accuracy:  0.804
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8130 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8230 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8080 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8130 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8070 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8050 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8130 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8010 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8160 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8140 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8110 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8140 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7960 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8070 
+
+Early stop! Min loss:  tensor(1.0733, grad_fn=<NllLossBackward>) , Max accuracy:  0.796
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7960 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8100 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8060 
+
+Early stop! Min loss:  tensor(1.3274, grad_fn=<NllLossBackward>) , Max accuracy:  0.796
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8110 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8030 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8090 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8160 
+
+Early stop! Min loss:  tensor(1.0686, grad_fn=<NllLossBackward>) , Max accuracy:  0.798
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8100 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8170 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8220 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8090 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8190 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8170 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8110 
+
+Early stop! Min loss:  tensor(1.0762, grad_fn=<NllLossBackward>) , Max accuracy:  0.798
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8080 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8280 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8100 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8210 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8100 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8170 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8200 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8130 
+
+Early stop! Min loss:  tensor(1.0594, grad_fn=<NllLossBackward>) , Max accuracy:  0.796
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7940 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8050 
+
+Early stop! Min loss:  tensor(1.1574, grad_fn=<NllLossBackward>) , Max accuracy:  0.806
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8140 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8140 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8060 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7970 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.8040 
+

@@ -1,0 +1,105 @@
+nohup: ignoring input
+{'is_train': True, 'is_DiGraph': False, 'times': 50, 'epoch_num': 200, 'wait_total': 100, 'd_names': ['Citeseer'], 'learning_rate': 0.005, 'gamma1': 2e-06, 'gamma2': 3e-07, 'leaky_relu_negative_slope': 0.1, 'loss_mode': 0, 'curvature_activate_mode': 2, 'mask_mode': 1, 'mask_rate': 0.5, 'learnable_curvature': 0, 'curvature_method': 1}
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6520 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6390 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6630 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6630 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6760 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6730 
+
+Early stop! Min loss:  tensor(1.5013, grad_fn=<NllLossBackward>) , Max accuracy:  0.7
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6970 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6490 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6670 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6380 
+
+Early stop! Min loss:  tensor(1.3826, grad_fn=<NllLossBackward>) , Max accuracy:  0.676
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6570 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6710 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6560 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6680 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6660 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6390 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6550 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6690 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6640 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6750 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6850 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6520 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6480 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6470 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6530 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6960 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6540 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6430 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6710 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6580 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6520 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6620 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6330 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6580 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6810 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6480 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6550 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6650 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6830 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6650 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6650 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6740 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6410 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6460 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6530 
+
+Early stop! Min loss:  tensor(1.5551, grad_fn=<NllLossBackward>) , Max accuracy:  0.686
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6690 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6610 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6660 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6660 
+
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6560 
+

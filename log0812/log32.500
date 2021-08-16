@@ -1,0 +1,107 @@
+nohup: ignoring input
+{'is_train': True, 'is_DiGraph': False, 'times': 50, 'epoch_num': 200, 'wait_total': 100, 'd_names': ['Cora'], 'learning_rate': 0.005, 'gamma1': 2e-06, 'gamma2': 3e-07, 'leaky_relu_negative_slope': 0.1, 'loss_mode': 0, 'curvature_activate_mode': 3, 'mask_mode': 2, 'mask_rate': 0.5, 'learnable_curvature': 0, 'curvature_method': 0}
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7510 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7360 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7660 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7430 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7440 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7380 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7390 
+
+Early stop! Min loss:  tensor(1.2270, grad_fn=<NllLossBackward>) , Max accuracy:  0.758
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7750 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7440 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7480 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7420 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7660 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7600 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7480 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7240 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7310 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7400 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7320 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7550 
+
+Early stop! Min loss:  tensor(1.2707, grad_fn=<NllLossBackward>) , Max accuracy:  0.746
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7510 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7510 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7640 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7560 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7610 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7740 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7480 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7550 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7600 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7630 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7410 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7690 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7550 
+
+Early stop! Min loss:  tensor(1.2318, grad_fn=<NllLossBackward>) , Max accuracy:  0.76
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7500 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7600 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7690 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7610 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7510 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7540 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7600 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7560 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7790 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7640 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7530 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7470 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7510 
+
+Early stop! Min loss:  tensor(1.2542, grad_fn=<NllLossBackward>) , Max accuracy:  0.732
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7470 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7610 
+
+Early stop! Min loss:  tensor(1.2330, grad_fn=<NllLossBackward>) , Max accuracy:  0.778
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7600 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7450 
+
+Epoch: 200, dataset name: Cora, Method: ConvCurv Test: 0.7360 
+

@@ -13,11 +13,13 @@ def find_x(vec):
                 return -1
             else:
                 index = idx
+    if index == -1:
+        print('not found')
     return index
 
 def find_cite(source, target):
     for i in cite:
-        if (i[0]==source and i[1]==target) or (i[1]==source and i[0]==target):
+        if (i[0] == source and i[1] == target) or (i[1] == source and i[0] == target):
             return True
     return False
 
@@ -33,11 +35,11 @@ x = x.to_numpy().astype('float32')
 
 raw_data = raw_data.to_numpy()
 
-with open("data/Cora/Cora/raw_忘了/ind.cora.allx", 'rb') as f:
+with open("data/Cora/Cora/raw_ml/ind.cora_v2.allx", 'rb') as f:
     allx = pickle.load(f, encoding='latin1').A
-with open("data/Cora/Cora/raw_忘了/ind.cora.tx", 'rb') as f:
+with open("data/Cora/Cora/raw_ml/ind.cora_v2.tx", 'rb') as f:
     tx = pickle.load(f, encoding='latin1').A
-with open("data/Cora/Cora/raw_忘了/ind.cora.graph", 'rb') as f:
+with open("data/Cora/Cora/raw_ml/ind.cora_v2.graph", 'rb') as f:
     ori_graph = pickle.load(f, encoding='latin1')
 ori_x = np.vstack((allx, tx))
 num=0
@@ -52,6 +54,6 @@ for source in ori_graph:
         source_id = raw_data[index1][0]  # 获取source节点的id
         target_id = raw_data[index2][0]  # 获取target节点的id
         if not find_cite(source_id, target_id): # 查找source-->target or target-->source是否存在在原始Cora数据集
-            num+=1
+            num += 1
 
 print(num)

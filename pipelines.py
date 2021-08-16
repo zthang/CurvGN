@@ -4,6 +4,7 @@ import loaddatas as lds
 import torch.nn.functional as F
 from torch_geometric.data import Data
 import random
+import math
 import numpy as np
 from config import Config
 from baselines import ConvCurv
@@ -27,10 +28,11 @@ def test(train_mask,val_mask,test_mask):
         acc = pred.eq(data.y[mask]).sum().item() / mask.sum().item()
         accs.append(acc)
     accs.append(F.nll_loss(logits[val_mask], data.y[val_mask]))
-    print(accs)
+    # print(accs)
     return accs
 
 config = Config()
+print(config.__dict__)
 #load dataset
 times = range(config.times)  #Todo:实验次数
 is_train = config.is_train
@@ -55,8 +57,8 @@ for d_name in d_names:
     dataset=lds.loaddatas(d_loader,d_name)
     for time in times:
         for Conv_method in pipelines:
-            data=dataset[0]
-            index=[i for i in range(len(data.y))]
+            data = dataset[0]
+            index = [i for i in range(len(data.y))]
             if d_loader != 'Planetoid':
                 train_len=20*int(data.y.max()+1)
                 train_mask=torch.tensor([i < train_len for i in index])
@@ -66,7 +68,7 @@ for d_name in d_names:
                 train_mask=data.train_mask.bool()
                 val_mask=data.val_mask.bool()
                 test_mask=data.test_mask.bool()
-            model,data = locals()[Conv_method].call(data,dataset.name,data.x.size(1),dataset.num_classes)
+            model,data = locals()[Conv_method].call(data,dataset.name,data.x.size(1),dataset.num_classes, config)
             optimizer = torch.optim.Adam(model.parameters(), lr=config.learning_rate, weight_decay=0.0005)
             best_val_acc = test_acc = 0.0
             best_val_loss = np.inf

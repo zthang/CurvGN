@@ -1,0 +1,152 @@
+nohup: ignoring input
+{'is_train': True, 'is_DiGraph': False, 'times': 50, 'epoch_num': 200, 'wait_total': 100, 'd_names': ['Citeseer'], 'learning_rate': 0.005, 'gamma1': 2e-06, 'gamma2': 3e-07, 'leaky_relu_negative_slope': 0.1, 'loss_mode': 0, 'curvature_activate_mode': 3, 'mask_mode': 2, 'mask_rate': 0.5, 'learnable_curvature': 2, 'curvature_method': 1}
+Early stop! Min loss:  tensor(1.5434, grad_fn=<NllLossBackward>) , Max accuracy:  0.466
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.4970 
+
+Early stop! Min loss:  tensor(1.5165, grad_fn=<NllLossBackward>) , Max accuracy:  0.522
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5320 
+
+Early stop! Min loss:  tensor(1.4460, grad_fn=<NllLossBackward>) , Max accuracy:  0.542
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5350 
+
+Early stop! Min loss:  tensor(1.4994, grad_fn=<NllLossBackward>) , Max accuracy:  0.586
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5420 
+
+Early stop! Min loss:  tensor(1.4706, grad_fn=<NllLossBackward>) , Max accuracy:  0.53
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5500 
+
+Early stop! Min loss:  tensor(1.5304, grad_fn=<NllLossBackward>) , Max accuracy:  0.542
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5450 
+
+Early stop! Min loss:  tensor(1.5212, grad_fn=<NllLossBackward>) , Max accuracy:  0.566
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5030 
+
+Early stop! Min loss:  tensor(1.6222, grad_fn=<NllLossBackward>) , Max accuracy:  0.472
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.4750 
+
+Early stop! Min loss:  tensor(1.5406, grad_fn=<NllLossBackward>) , Max accuracy:  0.504
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.4900 
+
+Early stop! Min loss:  tensor(1.5141, grad_fn=<NllLossBackward>) , Max accuracy:  0.482
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.4770 
+
+Early stop! Min loss:  tensor(1.5349, grad_fn=<NllLossBackward>) , Max accuracy:  0.52
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5160 
+
+Early stop! Min loss:  tensor(1.5028, grad_fn=<NllLossBackward>) , Max accuracy:  0.534
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5220 
+
+Early stop! Min loss:  tensor(1.5156, grad_fn=<NllLossBackward>) , Max accuracy:  0.548
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5320 
+
+Early stop! Min loss:  tensor(1.5165, grad_fn=<NllLossBackward>) , Max accuracy:  0.53
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.4970 
+
+Early stop! Min loss:  tensor(1.5332, grad_fn=<NllLossBackward>) , Max accuracy:  0.524
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5140 
+
+Early stop! Min loss:  tensor(1.5369, grad_fn=<NllLossBackward>) , Max accuracy:  0.556
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5520 
+
+Early stop! Min loss:  tensor(1.5242, grad_fn=<NllLossBackward>) , Max accuracy:  0.542
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5300 
+
+Early stop! Min loss:  tensor(1.5534, grad_fn=<NllLossBackward>) , Max accuracy:  0.456
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.4710 
+
+Early stop! Min loss:  tensor(1.5533, grad_fn=<NllLossBackward>) , Max accuracy:  0.488
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5150 
+
+Early stop! Min loss:  tensor(1.5201, grad_fn=<NllLossBackward>) , Max accuracy:  0.534
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5190 
+
+Early stop! Min loss:  tensor(1.5168, grad_fn=<NllLossBackward>) , Max accuracy:  0.512
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5300 
+
+Early stop! Min loss:  tensor(1.5685, grad_fn=<NllLossBackward>) , Max accuracy:  0.522
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5340 
+
+Early stop! Min loss:  tensor(1.5134, grad_fn=<NllLossBackward>) , Max accuracy:  0.526
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5690 
+
+Early stop! Min loss:  tensor(1.4654, grad_fn=<NllLossBackward>) , Max accuracy:  0.55
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5230 
+
+Early stop! Min loss:  tensor(1.5039, grad_fn=<NllLossBackward>) , Max accuracy:  0.51
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5200 
+
+Early stop! Min loss:  tensor(1.5609, grad_fn=<NllLossBackward>) , Max accuracy:  0.586
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5570 
+
+Early stop! Min loss:  tensor(1.4958, grad_fn=<NllLossBackward>) , Max accuracy:  0.542
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5450 
+
+Early stop! Min loss:  tensor(1.4871, grad_fn=<NllLossBackward>) , Max accuracy:  0.498
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5280 
+
+Early stop! Min loss:  tensor(1.5671, grad_fn=<NllLossBackward>) , Max accuracy:  0.52
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5340 
+
+Early stop! Min loss:  tensor(1.5419, grad_fn=<NllLossBackward>) , Max accuracy:  0.522
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5520 
+
+Early stop! Min loss:  tensor(1.5174, grad_fn=<NllLossBackward>) , Max accuracy:  0.51
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5230 
+
+Early stop! Min loss:  tensor(1.5427, grad_fn=<NllLossBackward>) , Max accuracy:  0.466
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.4890 
+
+Early stop! Min loss:  tensor(1.4960, grad_fn=<NllLossBackward>) , Max accuracy:  0.542
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5180 
+
+Early stop! Min loss:  tensor(1.5259, grad_fn=<NllLossBackward>) , Max accuracy:  0.544
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5340 
+
+Early stop! Min loss:  tensor(1.5806, grad_fn=<NllLossBackward>) , Max accuracy:  0.536
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5300 
+
+Early stop! Min loss:  tensor(1.5356, grad_fn=<NllLossBackward>) , Max accuracy:  0.542
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5480 
+
+Early stop! Min loss:  tensor(1.5312, grad_fn=<NllLossBackward>) , Max accuracy:  0.468
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5030 
+
+Early stop! Min loss:  tensor(1.5435, grad_fn=<NllLossBackward>) , Max accuracy:  0.498
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.4890 
+
+Early stop! Min loss:  tensor(1.4788, grad_fn=<NllLossBackward>) , Max accuracy:  0.59
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.6020 
+
+Early stop! Min loss:  tensor(1.5330, grad_fn=<NllLossBackward>) , Max accuracy:  0.548
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5280 
+
+Early stop! Min loss:  tensor(1.5016, grad_fn=<NllLossBackward>) , Max accuracy:  0.554
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5340 
+
+Early stop! Min loss:  tensor(1.5543, grad_fn=<NllLossBackward>) , Max accuracy:  0.52
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.4940 
+
+Early stop! Min loss:  tensor(1.5624, grad_fn=<NllLossBackward>) , Max accuracy:  0.544
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5280 
+
+Early stop! Min loss:  tensor(1.5124, grad_fn=<NllLossBackward>) , Max accuracy:  0.46
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.4400 
+
+Early stop! Min loss:  tensor(1.5029, grad_fn=<NllLossBackward>) , Max accuracy:  0.486
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5170 
+
+Early stop! Min loss:  tensor(1.5081, grad_fn=<NllLossBackward>) , Max accuracy:  0.506
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5240 
+
+Early stop! Min loss:  tensor(1.5038, grad_fn=<NllLossBackward>) , Max accuracy:  0.52
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.5660 
+
+Early stop! Min loss:  tensor(1.5273, grad_fn=<NllLossBackward>) , Max accuracy:  0.47
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.4990 
+
+Early stop! Min loss:  tensor(1.5497, grad_fn=<NllLossBackward>) , Max accuracy:  0.454
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.4610 
+
+Early stop! Min loss:  tensor(1.5186, grad_fn=<NllLossBackward>) , Max accuracy:  0.46
+Epoch: 200, dataset name: Citeseer, Method: ConvCurv Test: 0.4760 
+

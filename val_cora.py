@@ -67,15 +67,15 @@ x = raw_data.iloc[:,1:1434]
 x = x.to_numpy().astype('float32')
 raw_data = raw_data.to_numpy()
 
-with open("data/Cora/Cora/raw/ind.cora.allx", 'rb') as f:
+with open("data/Cora/Cora/raw_ml/ind.cora.allx", 'rb') as f:
     allx = pickle.load(f, encoding='latin1').A
-with open("data/Cora/Cora/raw/ind.cora.tx", 'rb') as f:
+with open("data/Cora/Cora/raw_ml/ind.cora.tx", 'rb') as f:
     tx = pickle.load(f, encoding='latin1').A
-with open("data/Cora/Cora/raw/ind.cora.ally", 'rb') as f:
+with open("data/Cora/Cora/raw_ml/ind.cora.ally", 'rb') as f:
     ally = pickle.load(f, encoding='latin1')
-with open("data/Cora/Cora/raw/ind.cora.ty", 'rb') as f:
+with open("data/Cora/Cora/raw_ml/ind.cora.ty", 'rb') as f:
     ty = pickle.load(f, encoding='latin1')
-with open("data/Cora/Cora/raw/ind.cora.graph", 'rb') as f:
+with open("data/Cora/Cora/raw_ml/ind.cora.graph", 'rb') as f:
     ori_graph = pickle.load(f, encoding='latin1')
 ori_x = np.vstack((allx, tx))
 ori_y = np.vstack((ally, ty))
